@@ -5,9 +5,10 @@ import (
 )
 
 type Module interface {
-	OnConfig() //系统启动方法
-	OnStart()  //系统启动方法
-	OnInit()   //可重写启动方法
+	OnConfig()              //系统启动方法
+	OnStart()               //系统启动方法
+	OnInit()                //可重写启动方法
+	OnLogic(it interface{}) //可重写逻辑方法
 	OnDestroy()
 }
 
